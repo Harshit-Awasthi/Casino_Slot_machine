@@ -1,23 +1,29 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Casino ;)</title>
+    <title>Casino Game</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script async defer src="script.js"></script>
 </head>
 <body>
-    <div class="machine">
-        <div class="slot" id="slot1"><div class="value" id="value1">🤩 </div></div>
-        <div class="slot" id="slot2"><div class="value" id="value2">😵‍💫</div></div>
-        <div class="slot" id="slot3"><div class="value" id="value3">🤑</div></div>
-    </div>
-    <br><br>
-    <center><button id="startButton"> Start </button></center>
+    <div class="slot-machine-bg">
+        <div class="container">
+            <div class="machine">
+                <div class="slot" id="slot1"><div class="value" id="value1">🤩</div></div>
+                <div class="slot" id="slot2"><div class="value" id="value2">😵‍💫</div></div>
+                <div class="slot" id="slot3"><div class="value" id="value3">🤑</div></div>
+            </div>
+            <br>
+            <center><button id="startButton" class="btn btn-primary">Start</button></center>
+        </div>
 
-    <div> <p>Participant 1: <span class="text-success">Winner</span></p></div>
+        <div class="container result-container "  style="display: inline-block;">
+            <div class="row">
+                <div class="col-md-6" id="win"></div>
+                <div class="col-md-6" id="lose"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

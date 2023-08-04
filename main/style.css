@@ -1,57 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
+.slot-machine-bg {
+  background: linear-gradient(180deg, #d3a625, #f2d655);
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #f8f9fa;
+  border: 10px solid #d3a625;
+  border-radius: 15px;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px;
+}
 
 .machine {
-    background-color: peru;
-    border: dashed brown 3px;
-    height: 300px;
-    width: 900px;
-    margin: 50px;
-    display: flex;
-    z-index: 5;
-  }
-  
-  .slot {
-    height: 250px;
-    width: 250px;
-    margin: 20px;
-    background-color: beige;
-    border: solid darkblue 2px;
-    text-align: center;
-    font-size: 100pt;
-    line-height: 250px;
-    z-index: 1;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slot .value {
-    z-index: 3;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: slotspin 0.15s infinite linear;
-  }
-  
-  @keyframes slotspin {
-    0% {
+  background-color: peru;
+  border: dashed brown 3px;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  overflow: hidden;
+  position: relative;
+}
+
+.slot {
+  height: 250px;
+  width: 250px;
+  margin: 20px;
+  background-color: beige;
+  border: solid darkblue 2px;
+  text-align: center;
+  font-size: 100pt;
+  line-height: 250px;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.slot .value {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slotspin 0.15s infinite linear;
+}
+
+@keyframes slotspin {
+  0% {
       transform: translateY(-200px);
-    }
-    100% {
+  }
+  100% {
       transform: translateY(200px);
-    }
   }
-  
-  button#startButton {
-    font-size: 20px;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  
+}
 
+button#startButton {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
 
+.result-container {
+  margin-top: 20px;
+}
+
+.alert {
+  margin-bottom: 10px;
+}
