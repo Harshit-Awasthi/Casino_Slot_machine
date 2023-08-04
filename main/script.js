@@ -1,21 +1,4 @@
-/*let value1 = document.getElementById('value1');
-let value2 = document.getElementById('value2');
-let value3 = document.getElementById('value3');
 
-let values = ['😇', '🥶', '🤯', '🥳', '😓', '🤠', '🤩', '😵‍💫', '🤑'];
-
-function getRandomValue() {
-  return values[Math.floor(Math.random() * values.length)];
-  
-}
-
-setInterval(() => {
-  value1.innerText = getRandomValue();
-  value2.innerText = getRandomValue();
-  value3.innerText = getRandomValue();
-}, 300);
-
-*/
 
 let value1 = document.getElementById('value1');
 let value2 = document.getElementById('value2');
@@ -43,6 +26,34 @@ function startAnimation() {
   value1.style.animation = 'none';
   value2.style.animation = 'none';
   value3.style.animation = 'none';
+  function calculate()
+  {
+
+    let count=0;
+
+    if(value1.innerText == '😓' || value1.innerText == '😵‍💫' || value1.innerText == '🤯' || value1.innerText == '🥶' )
+    {
+      count++;
+    }
+    if(value2.innerText == '😓' || value2.innerText == '😵‍💫' || value2.innerText == '🤯' || value2.innerText == '🥶' )
+    {
+      count++;
+    }
+    if(value3.innerText == '😓' || value3.innerText == '😵‍💫' || value3.innerText == '🤯' || value3.innerText == '🥶' )
+    {
+      count++;
+    }
+    if(count<=1)
+    {
+      console.log("winner");
+      
+    }
+    else{
+      console.log("loser");
+    }
+
+
+  }
 
   setTimeout(() => {
     value1.style.animation = 'slotspin infinite linear';
@@ -58,12 +69,15 @@ function startAnimation() {
       if (speed <= 0) {
         clearInterval(interval);
         animationStarted = false;
+        calculate();
       }
     }, speed);
   }, 0);
 }
 
 startButton.addEventListener('click', startAnimation);
+
+
 
 
 
